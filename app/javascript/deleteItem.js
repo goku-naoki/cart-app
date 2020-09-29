@@ -1,4 +1,4 @@
-window.addEventListener("turbolinks:load", () => {
+document.addEventListener("DOMContentLoaded",()=>{
   const loader=document.getElementById('overlay')
   const deleteItemBtn=document.getElementById('item-delete')
   console.log(deleteItemBtn)

@@ -5,19 +5,24 @@ class ItemsController < ApplicationController
     @items=Item.all
     if request.fullpath.include?("admin")
       no_admin and return
+      @paths=[]
       @items.each do |item|
-        @path=admin_item_path(current_admin.id,item.id)
+        path=admin_item_path(current_admin.id,item.id)
+        @paths<<path
       end
       render layout: 'admin'
     else
+      @paths=[]
       @items.each do |item|
-        @path=item_path(item.id)
+       path=item_path(item.id)
+       @paths<<path
       end
+    
     end
-  
   end 
 
   def show
+    
     @item=Item.find(params[:id])
       if @cart_in_this=@item.cart_items.find_by(cart_id: session['cart_id'])
         @cart_in_this

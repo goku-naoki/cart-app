@@ -1,4 +1,4 @@
-window.addEventListener("turbolinks:load", () => {
+document.addEventListener("DOMContentLoaded",()=>{
 
   // 決済処理を許可するurlは</items/:id/transactions>の場合です。
   // const path = location.pathname

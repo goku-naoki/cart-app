@@ -5,7 +5,7 @@ class Item < ApplicationRecord
   has_many :cart_items
 
   with_options presence: true do
-    validates :images
+    # validates :images
     validates :name
     validates :detail
     validates :price

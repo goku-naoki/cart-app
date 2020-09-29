@@ -7,8 +7,31 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Admin.create!(
-   name: 'kb',
-   email: 'kb@icloud.com',
-   password: 'kbtest'
-)
+# Admin.create!(
+#    name: 'kb',
+#    email: 'kb@icloud.com',
+#    password: 'kbtest'
+# )
+
+
+6.times do |index|
+   Item.create!(
+      name: '女性',
+      detail: 'GORE-TEX®と再びパートナーシップを組み、風雨からの防護性に優れたガーメントをリリースします。今回のコレクションにはGORE-TEX®が特許を取得している、防水透湿素材を使ったシェル、パンツ、バケットハットをラインナップ。
+   
+               100%ポリエステル - インポート。',
+      price: 19000,
+      hide: false
+   )
+   
+   num=index+1
+   item=Item.find(num)
+   item.images.attach(io: File.open('public/IMG_0539.jpg'), filename: 'IMG_0539.jpg')
+   num+=index
+ end
+
+1
+2
+3
+4
+5

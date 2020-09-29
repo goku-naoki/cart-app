@@ -1,4 +1,4 @@
-document.addEventListener("turbolinks:load",()=>{
+document.addEventListener("DOMContentLoaded",()=>{
 
   let imageInputs=Array.from(document.getElementsByClassName('image-field'));
   let imageLength=0;

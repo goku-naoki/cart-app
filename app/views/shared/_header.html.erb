@@ -1,12 +1,9 @@
 <div  id="header" >
   <div class="header" > 
     <div class="header-left">
-      <h1><%=link_to 'KB',root_path%></h1>
+      <h1><%=link_to 'Cart-app',root_path%></h1>
     </div>
     <ul class="header-right">
-      <li><%=link_to 'Bio',profiles_path %></li>
-      <li><%=link_to 'Barber',barber_index_path %></li>
-      <li><%=link_to 'Art',art_index_path %></li>
       <li><%=link_to 'Shop',items_path %></li>
       <li><%=link_to 'Cart',cart_path(current_cart.id) %></li>
     </ul>
@@ -17,9 +14,6 @@
 
      <div class="header-right-sp" id="sp-nav">
        <ul>
-        <li><%=link_to 'Bio',profiles_path %></li>
-        <li><%=link_to 'Barber',barber_index_path %></li>
-        <li><%=link_to 'Art',art_index_path %></li>
         <li><%=link_to 'Shop',items_path %></li>
         <li><%=link_to 'Cart',cart_path(current_cart.id) %></li>
         <li class="close nav"><span>閉じる</span></li>

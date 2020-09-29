@@ -1,4 +1,4 @@
-window.addEventListener("turbolinks:load",()=>{
+document.addEventListener("DOMContentLoaded",()=>{
  const navs=Array.from(document.getElementsByClassName('nav'))
  const spNav=document.getElementById('sp-nav')
   console.log(navs)

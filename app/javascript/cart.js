@@ -1,5 +1,4 @@
-// if (document.URL.match( /items/ )) {
-document.addEventListener("turbolinks:load",()=>{
+document.addEventListener("DOMContentLoaded",()=>{
   const cartBtn=document.getElementById('cart-btn')
   const item_id=Number(cartBtn.getAttribute("data-item-id"))
   const loader=document.getElementById('overlay')

@@ -1,4 +1,4 @@
-document.addEventListener("turbolinks:load",()=>{
+document.addEventListener("DOMContentLoaded",()=>{
   let deleteCartBtns=Array.from(document.getElementsByClassName("cart-box-left-list-detail-right-delete"));
   const loader=document.getElementById('overlay')
   const cartBox=document.getElementById('cart-box')
