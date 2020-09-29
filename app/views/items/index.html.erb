@@ -1,0 +1,30 @@
+<div id="items">
+  <div class="container">
+    <div class="items-header">
+       <%if admin_signed_in? && current_page?(admin_items_path(current_admin))%>
+       <h2>出品一覧</h2>
+        <%else%>
+       <h2>Shop</h2>
+        <%end%>
+    </div>
+    <div class="items-list">
+      <% @items.each do |item| %>
+        <%unless item.hide==true%>
+          <div class="item-box">
+            <%=link_to @path do%>
+              <div class="item-box-pic">
+                <%= image_tag item.images[0] %>
+              </div>
+              <p class="item-box-name">
+                <%=item.name %>
+              </p>
+              <p class="item-box-price">
+                $<%=item.price %> 円
+              </p>
+            <%end%>
+          </div>
+        <%end%>
+      <%end%>
+    </div>
+  </div>
+</div>
