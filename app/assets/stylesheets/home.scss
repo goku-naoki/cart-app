@@ -22,7 +22,7 @@
 .wrapper-img img{
   width:100%;
  
-  
+  object-fit: cover;
   height:500px;
 
 }
@@ -54,6 +54,7 @@
   position:static;
   z-index:1;
   transition: 0.5s;
+  object-fit: cover;
 }
 
 .intro-photo img:hover{
